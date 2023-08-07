@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/models/category.dart';
-import 'package:meals/screens/categories_meals_screen.dart';
+import 'package:meals/utils/app_routes.dart';
 
 class CategoryItem extends StatefulWidget {
   final Category category;
@@ -15,12 +15,16 @@ class _CategoryItemState extends State<CategoryItem> {
   bool isHovered = false;
 
   void _selectCategory(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) {
-          return const CategoriesMealsScreen();
-        },
-      ),
+    // Navigator.of(context).push(
+    //   MaterialPageRoute(
+    //     builder: (_) {
+    //       return  CategoriesMealsScreen();
+    //     },
+    //   ),
+    // );
+    Navigator.of(context).pushNamed(
+      AppRoutes.CATEGORIES_MEALS,
+      arguments: widget.category,
     );
   }
 
