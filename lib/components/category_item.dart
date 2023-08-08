@@ -44,7 +44,7 @@ class _CategoryItemState extends State<CategoryItem> {
       },
       child: InkWell(
         onTap: () => _selectCategory(context),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(15),
         splashColor: Theme.of(context).primaryColor,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 150),
