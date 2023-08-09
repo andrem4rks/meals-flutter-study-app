@@ -34,15 +34,16 @@ class MainDrawer extends StatelessWidget {
             Icons.settings,
             'Configurações',
             context,
-            () => Navigator.of(context).pushNamed(AppRoutes.SETTINGS),
+            () =>
+                Navigator.of(context).pushReplacementNamed(AppRoutes.SETTINGS),
           ),
         ],
       ),
     );
   }
 
-  Widget _createItem(
-      IconData icon, String label, BuildContext context, void Function() onTap) {
+  Widget _createItem(IconData icon, String label, BuildContext context,
+      void Function() onTap) {
     return ListTile(
       leading: Icon(
         icon,
